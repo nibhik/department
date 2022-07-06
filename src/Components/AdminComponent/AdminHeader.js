@@ -30,7 +30,7 @@ class HeaderDashboard extends Component{
                         
                         <Route path='/AdminProfile' element={<AdminProfile />} />
                       
-                        <Route path='/EditDepartment' element={<EditDepartment />} /> 
+                        <Route path='/EditDepartment/:Id' element={<EditDepartment />} /> 
                           <Route path='/AddDepartment' element={<CreateDepartment/>} />
                     </Routes>
                 </div>

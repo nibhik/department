@@ -1,41 +1,32 @@
 import React,{Component, useState} from "react";
 import DepartmentService from "../../Services/Department";
 
-class CreateDepartment extends Component{
+const CreateDepartment =props =>{
     
-    constructor(){
-        super();
-        this.state = {
-            category :" ",
-            departmentName : " ",
-            consultant : ""
-        };
-    }
-    
-    changeHandler = ev =>{
+    const[department,setDepartment]= useState({
+        departmentName: '',
+        consultant:'',
+        category:''
+    })
+    const changeHandler = ev =>{
         let{name, value} = ev.target;
         this.setState({[name]: value});
     }
 
-         submitHandler = ev =>{
+     const  submitHandler = ev =>{
                     ev.preventDefault();
-                   DepartmentService.addNewDeaprtment(newDeaprtment)
+                   DepartmentService.addNewDeaprtment(department)
                    .then(res =>{
                     alert("Department created!!");
                    })
                    .catch(res => {
                     alert("Something went wrong");
                    });
-                console.log(newDeaprtment);
-                this.setState({
-                    category :" ",
-                    departmentName : " ",
-                    consultant : ""
-                });
+                
         }
     
 
-    render(){
+   
         return(
             <div>
                 <div className='card mx-auto mt-5 justify-content-center' style={{width: "55%"}}>
@@ -89,7 +80,7 @@ class CreateDepartment extends Component{
                 </div>
             </div>
         );
-    }
+    
 }
 
 export default CreateDepartment;

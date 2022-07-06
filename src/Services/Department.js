@@ -18,7 +18,7 @@ const updateDepartment = id => {
 }
 
 const removeDepartment = (departmentId) => {
-    return http.delete('api/Admin/${departmentId}');
+    return http.delete('api/Admin/'+departmentId);
 }
 
 let DepartmentService  = {addNewDeaprtment, removeDepartment,updateDepartment, getDepartment};
