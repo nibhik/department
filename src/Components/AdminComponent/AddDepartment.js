@@ -10,8 +10,13 @@ const CreateDepartment =props =>{
     })
     const changeHandler = ev =>{
         let{name, value} = ev.target;
-        this.setState({[name]: value});
+        setDepartment({
+            [name]:value
+        });
+
+       
     }
+    console.log(department);
 
      const  submitHandler = ev =>{
                     ev.preventDefault();
@@ -21,8 +26,7 @@ const CreateDepartment =props =>{
                    })
                    .catch(res => {
                     alert("Something went wrong");
-                   });
-                
+                   });  
         }
     
 
@@ -41,10 +45,10 @@ const CreateDepartment =props =>{
                           <div className='col-sm-6'>
                               <input type="text" className="form-control"
                               placeholder="Enter Category"
-                              id="cat"
+                              id="category"
                               name="category"
-                              value={this.state.category}
-                              onChange = {this.changeHandler.bind(this)}
+                              value={department.category}
+                              onChange = {changeHandler}
                               required/>
                              </div>
                       </div>
@@ -53,10 +57,10 @@ const CreateDepartment =props =>{
                           <div className='col-sm-6'>
                               <input type="text" className="form-control"
                               placeholder="Enter department name"
-                              id="dept"
-                              name="deptName"
-                              value={this.state.departmentName}
-                              onChange = {this.changeHandler.bind(this)}
+                              id="departmentName"
+                              name="departmentName"
+                              value={department.departmentName}
+                              onChange = {changeHandler}
                               required/>
                              </div>
                       </div>
@@ -65,10 +69,10 @@ const CreateDepartment =props =>{
                           <div className='col-sm-6'>
                               <input type="text" className="form-control"
                               placeholder="Enter doctor name"
-                              id="doc"
-                              name="docName"
-                              value={this.state.consultant}
-                              onChange = {this.changeHandler.bind(this)}
+                              id="consultant"
+                              name="consultant"
+                              value={department.consultant}
+                              onChange = {changeHandler}
                               required/>
                              </div>
                       </div>
