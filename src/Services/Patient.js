@@ -2,7 +2,7 @@ import axios from "axios";
 
 const http = axios.create({
     headers: { 'content-type': 'application/json', 'Authorization': '' },
-    baseURL: 'http://localhost:35246/{patients}' //35246 //5000
+    baseURL: 'http://localhost:35246/' //35246 //5000
 });
 
 const getAppointment = () => {

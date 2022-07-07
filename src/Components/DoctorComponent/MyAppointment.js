@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component, useEffect, useState} from "react";
+import PatientService from "../../Services/Patient";
 
-class UpcomingAppointment extends Component {
+cconst UpcomingAppointment {
   render() {
     return (
         <div>

@@ -10,8 +10,7 @@ const CreateDepartment =props =>{
     })
     const changeHandler = ev =>{
         let{name, value} = ev.target;
-        setDepartment({
-            [name]:value
+        setDepartment({  ...department,[name]:value
         });
 
        
@@ -24,9 +23,7 @@ const CreateDepartment =props =>{
                    .then(res =>{
                     alert("Department created!!");
                    })
-                   .catch(res => {
-                    alert("Something went wrong");
-                   });  
+                   .catch(res => { });  
         }
     
 
