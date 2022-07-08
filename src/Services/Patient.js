@@ -6,17 +6,18 @@ const http = axios.create({
 });
 
 const getAppointment = () => {
-    return http.get('api/patients');
+    return http.get('api/Patient');
 }
-const updateAppointmentId = id =>{
-    return http.get('api/patient/'+id);
-}
-const removeAppointment = (appointmentId) => {
-    return http.delete(`api/patient/${appointmentId}`);
-}
-const addNewAppointment = appointmentObj => {
-    return http.post('api/patient', appointmentObj);
-}
+// const updateAppointmentId = id =>{
+//     return http.get('api/patient/'+id);
+// }
+// const removeAppointment = (appointmentId) => {
+//     return http.delete(`api/patient/${appointmentId}`);
+// }
+// const addNewAppointment = appointmentObj => {
+//     return http.post('api/patient', appointmentObj);
+// }
 
-let PatientService = { getAppointment, updateAppointmentId, removeAppointment, addNewAppointment };
+// let PatientService = { getAppointment, updateAppointmentId, removeAppointment, addNewAppointment };
+let PatientService = {getAppointment};
 export default PatientService;

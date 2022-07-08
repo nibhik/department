@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import DashboardDoctor from './DashboardDoctor';
 import ProfileDoctor from './ProfileDoctor';
 import AccountIcon from '../../Images/account_circle.png'; 
-import MyAppointment from './MyAppointment';
-import UpcomingAppointment from './upcomingAppointment';
+import UpcomingAppointment from './MyAppointment';
+//import UpcomingAppointment from './upcomingAppointment';
 
 class HeaderDashboard extends Component {
     render (){
